@@ -1,0 +1,51 @@
+$ cd /c
+$ cd git/
+BEDRO@LAPTOP-IAKQ7UFK MINGW64 /c/git (master)
+$ git add getting-started.txt
+
+BEDRO@LAPTOP-IAKQ7UFK MINGW64 /c/git (master)
+$ git add git-branching.txt
+
+BEDRO@LAPTOP-IAKQ7UFK MINGW64 /c/git (master)
+$ git commit -m "number 1"
+[master 767a91b] number 1
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 getting-started.txt
+ create mode 100644 git-branching.txt
+
+BEDRO@LAPTOP-IAKQ7UFK MINGW64 /c/git (master)
+$ git add all-of-my-commnds.txt
+
+BEDRO@LAPTOP-IAKQ7UFK MINGW64 /c/git (master)
+$ git commit -m "number 1" Distributed-git.txt
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+        all-of-my-commnds.txt
+
+nothing added to commit but untracked files present
+
+BEDRO@LAPTOP-IAKQ7UFK MINGW64 /c/git (master)
+$ git push -u origin master
+
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 440 bytes | 440.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0)
+To https://github.com/bedro97/SE.git, done.
+   b1bbd5f..767a91b  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+BEDRO@LAPTOP-IAKQ7UFK MINGW64 /c/git (master)
+$
+
+BEDRO@LAPTOP-IAKQ7UFK MINGW64 /c/git (master)
+$ git commit -m "number 1" Distributed-git.txt
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+        all-of-my-commnds.txt
