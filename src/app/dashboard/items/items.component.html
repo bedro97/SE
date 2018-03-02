@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form class="form-inline"  [formGroup]="addForm" (ngSubmit)="make(addForm.value)">
+    <label class="sr-only" for="inlineFormInputName2">Name</label>
+    <input type="text" formControlName="name" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Name">
+
+    <label class="sr-only" for="inlineFormInputGroupprice2">Price</label>
+    <div class="input-group mb-2 mr-sm-2">
+        <div class="input-group-prepend">
+            <div class="input-group-text"></div>
+        </div>
+        <input type="number" formControlName="price" class="form-control" id="inlineFormInputGroupprice2" placeholder="price">
+      <!--  <input type="text" ng-model="favMeat" placeholder=" off" /> -->
+    </div>
+
+
+    <input type="submit" class="btn btn-primary mb-2" value="add">
+</form>
+<table class="table">
+    <thead>
+    <tr >
+        <th scope="col">Name</th>
+        <th scope="col">price</th>
+        <th scope="col">Created at</th>
+        <th scope="col">updated at</th>
+        <th scope="col">action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let pr of montag">
+        <th>{{pr.name}}</th>
+        <th>{{pr.price}}</th>
+        <th>{{pr.createdAt}}</th>
+        <th>{{pr.updatedAt}}</th>
+        <th><input type="submit" value="delete" (click)="delete(pr._id)">
+            <form class="form-inline"  [formGroup]="addForme" (ngSubmit)="update(pr._id,addForme.value)">
+                <label class="sr-only" for="inlineFormInputName2">Name</label>
+                <input type="text" formControlName="namee" class="form-control mb-2 mr-sm-2" id="inlineFormInputName92" placeholder="Name">
+
+                <label class="sr-only" for="inlineFormInputGroupprice2">Price</label>
+                <div class="input-group mb-2 mr-sm-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text"></div>
+                    </div>
+                    <input type="number" formControlName="pricee" class="form-control" id="inlineFormInputGroupprice72" placeholder="price">
+                    <!--  <input type="text" ng-model="favMeat" placeholder=" off" /> -->
+                </div>
+
+
+                <input type="submit" class="btn btn-primary mb-2" value="update">
+            </form></th>>
+
+    </tr>
+
+    </tbody>
+</table>
+</body>
+</html>
